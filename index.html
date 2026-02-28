@@ -1,1 +1,99 @@
-<html><body><h1>test Sat Feb 28 01:28:16 PM EST 2026</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI News Daily</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:#080c0f;color:#e6edf3;font-family:'Inter',sans-serif;padding-bottom:80px;}
+    header{background:#080c0f;border-bottom:1px solid #21262d;padding:24px 40px;}
+    .term-bar{font-family:'JetBrains Mono',monospace;font-size:11px;color:#555;margin-bottom:14px;}
+    .term-bar span{color:#39ff14;}
+    h1{font-family:'JetBrains Mono',monospace;font-size:clamp(24px,4vw,42px);font-weight:700;color:#39ff14;}
+    h1 em{color:#e6edf3;font-style:normal;}
+    .meta{margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#555;}
+    .meta span{color:#58a6ff;}
+    .blink{animation:blink 1s step-end infinite;} @keyframes blink{50%{opacity:0;}}
+    .zone{padding:40px;}
+    .zone-models{background:#020f02;border-top:3px solid #39ff14;}
+    .zone-research{background:#020a18;border-top:3px solid #58a6ff;}
+    .zone-tools{background:#130820;border-top:3px solid #a78bfa;}
+    .zone-funding{background:#1a0f00;border-top:3px solid #f97316;}
+    .zone-policy{background:#180008;border-top:3px solid #f43f5e;}
+    .zone-label{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+    .zone-models .zone-label{color:#39ff14;} .zone-research .zone-label{color:#58a6ff;} .zone-tools .zone-label{color:#a78bfa;} .zone-funding .zone-label{color:#f97316;} .zone-policy .zone-label{color:#f43f5e;}
+    .zone-label::before{content:'##';}
+    .zone-label::after{content:'';flex:1;height:1px;opacity:0.3;background:currentColor;}
+    .feed{display:flex;flex-direction:column;gap:3px;}
+    .item{padding:16px 20px;border:1px solid;display:grid;grid-template-columns:28px 1fr auto;gap:14px;align-items:start;text-decoration:none;color:inherit;transition:filter 0.15s;}
+    .item:hover{filter:brightness(1.3);}
+    .zone-models .item{background:#031a03;border-color:#1a3d1a;} .zone-research .item{background:#02101f;border-color:#0d2a4a;} .zone-tools .item{background:#0f0520;border-color:#2a1060;} .zone-funding .item{background:#1a0e00;border-color:#3d2000;} .zone-policy .item{background:#180005;border-color:#3d0015;}
+    .item-num{font-family:'JetBrains Mono',monospace;font-size:10px;opacity:0.4;padding-top:3px;}
+    .item-title{font-size:14px;font-weight:600;line-height:1.4;margin-bottom:5px;}
+    .item-summary{font-size:12px;color:#8b949e;line-height:1.6;}
+    .item-source{font-family:'JetBrains Mono',monospace;font-size:10px;color:#58a6ff;white-space:nowrap;}
+    footer{text-align:center;padding:24px 40px;font-family:'JetBrains Mono',monospace;font-size:10px;color:#555;border-top:1px solid #21262d;}
+    @media(max-width:768px){header,.zone{padding:20px 16px;}.item{grid-template-columns:20px 1fr;}.item-source{display:none;}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="term-bar">wally@hq:~$ <span>./ai-news --date 2026-02-28 --format=feed</span></div>
+    <h1>AI/<em>news</em> <span class="blink">_</span></h1>
+    <div class="meta">Saturday, February 28, 2026 &nbsp;·&nbsp; 48h window &nbsp;·&nbsp; Status: <span style="color:#39ff14">● LIVE</span></div>
+  </header>
+
+  <div class="zone zone-funding">
+    <div class="zone-label">Funding &amp; Business</div>
+    <div class="feed">
+      <a class="item" href="https://www.nytimes.com/2026/02/27/business/openai-funding.html" target="_blank">
+        <div class="item-num">01</div>
+        <div><div class="item-title">OpenAI Raises $110 Billion at $730B Valuation</div><div class="item-summary">Amazon leads with $50B, NVIDIA and SoftBank each contributing $30B. Deal includes multi-year AWS infrastructure partnership. Largest private fundraise in tech history.</div></div>
+        <div class="item-source">nytimes.com</div>
+      </a>
+      <a class="item" href="https://www.reuters.com/commentary/breakingviews/ai-fears-give-tech-ceos-convenient-cover-cuts-2026-02-27/" target="_blank">
+        <div class="item-num">02</div>
+        <div><div class="item-title">Block Fires 50% of Workers, Cites AI Automation</div><div class="item-summary">Payments firm Block is cutting nearly half its workforce, citing AI-driven efficiency gains. Stock jumped $6B on the news. Analysts call it AI disruption used as convenient cover for a long-overdue cleanup.</div></div>
+        <div class="item-source">reuters.com · Feb 27</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="zone zone-policy">
+    <div class="zone-label">Policy &amp; Safety</div>
+    <div class="feed">
+      <a class="item" href="https://www.rfi.fr/en/international-news/20260228-vietnam-ai-law-takes-effect-first-in-southeast-asia" target="_blank">
+        <div class="item-num">03</div>
+        <div><div class="item-title">Vietnam's AI Law Takes Effect — First in Southeast Asia</div><div class="item-summary">Vietnam becomes the first Southeast Asian country to enact comprehensive AI regulation. Law covers transparency requirements, accountability frameworks, and restrictions on high-risk applications.</div></div>
+        <div class="item-source">rfi.fr · Feb 28</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="zone zone-models">
+    <div class="zone-label">Models &amp; Releases</div>
+    <div class="feed">
+      <a class="item" href="https://247wallst.com/investing/2026/02/27/we-asked-4-ai-models-what-xrp-will-be-worth-by-december-31-2026-their-answers-ranged-from-1-4-to-14/" target="_blank">
+        <div class="item-num">04</div>
+        <div><div class="item-title">ChatGPT, Claude, Grok &amp; DeepSeek Give Wildly Different XRP Predictions</div><div class="item-summary">Four leading AI models asked to forecast XRP by year end: answers ranged from $1.40 to $14. Highlights divergence in how frontier models handle financial prediction and uncertainty quantification.</div></div>
+        <div class="item-source">247wallst.com · Feb 27</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="zone zone-research">
+    <div class="zone-label">Research &amp; Papers</div>
+    <div class="feed">
+      <div class="item">
+        <div class="item-num">05</div>
+        <div><div class="item-title">AI &amp; Market Volatility: February End Selloff</div><div class="item-summary">AI spending concerns continue to rattle Wall Street as Dow, S&P 500, and Nasdaq all fell to close out February. Questions around AI ROI and infrastructure sustainability driving institutional caution.</div></div>
+        <div class="item-source">yahoo finance · Feb 27</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>AI News Daily &nbsp;·&nbsp; wally@hq &nbsp;·&nbsp; Refreshed daily at 07:00 EST</footer>
+</body>
+</html>
