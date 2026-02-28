@@ -44,6 +44,17 @@
       .item-title{font-size:14px;}
       .item-summary{font-size:12px;}
     }
+  
+    .section-block{padding:32px 0;border-top:1px solid var(--border);}
+    .section-block:nth-child(odd){background:transparent;}
+    .section-block:nth-child(even){background:#0d1117;margin:0 -40px;padding:32px 40px;}
+    .section-header{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--green);margin-bottom:20px;display:flex;align-items:center;gap:12px;padding:8px 12px;background:var(--green-dim);border-left:3px solid var(--green);}
+    .section-header::before{content:'//';margin-right:4px;}
+    .section-header::after{content:'';flex:1;height:1px;background:var(--green-dim);}
+    .feed{gap:4px;}
+    .item{border-left:2px solid transparent;transition:border-color 0.15s,background 0.15s;}
+    .item:hover{border-left-color:var(--green);}
+
   </style>
 </head>
 <body>
