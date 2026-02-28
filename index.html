@@ -1,1 +1,174 @@
-<html><body><h1>test Sat Feb 28 01:28:16 PM EST 2026</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI News Daily</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:#080c0f;color:#e6edf3;font-family:'Inter',sans-serif;padding-bottom:80px;}
+    header{background:#080c0f;border-bottom:1px solid #21262d;padding:24px 40px;}
+    .term-bar{font-family:'JetBrains Mono',monospace;font-size:11px;color:#555;margin-bottom:14px;}
+    .term-bar span{color:#39ff14;}
+    h1{font-family:'JetBrains Mono',monospace;font-size:clamp(24px,4vw,42px);font-weight:700;color:#39ff14;}
+    h1 em{color:#e6edf3;font-style:normal;}
+    .meta{margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#555;}
+    .meta span{color:#58a6ff;}
+    .blink{animation:blink 1s step-end infinite;} @keyframes blink{50%{opacity:0;}}
+    .zone{padding:40px;}
+    .zone-models{background:#020f02;border-top:3px solid #39ff14;}
+    .zone-research{background:#020a18;border-top:3px solid #58a6ff;}
+    .zone-tools{background:#130820;border-top:3px solid #a78bfa;}
+    .zone-funding{background:#1a0f00;border-top:3px solid #f97316;}
+    .zone-policy{background:#180008;border-top:3px solid #f43f5e;}
+    .zone-label{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+    .zone-models .zone-label{color:#39ff14;}
+    .zone-research .zone-label{color:#58a6ff;}
+    .zone-tools .zone-label{color:#a78bfa;}
+    .zone-funding .zone-label{color:#f97316;}
+    .zone-policy .zone-label{color:#f43f5e;}
+    .zone-label::before{content:'##';}
+    .zone-label::after{content:'';flex:1;height:1px;opacity:0.3;}
+    .zone-models .zone-label::after{background:#39ff14;}
+    .zone-research .zone-label::after{background:#58a6ff;}
+    .zone-tools .zone-label::after{background:#a78bfa;}
+    .zone-funding .zone-label::after{background:#f97316;}
+    .zone-policy .zone-label::after{background:#f43f5e;}
+    .feed{display:flex;flex-direction:column;gap:3px;}
+    .item{padding:16px 20px;border:1px solid;display:grid;grid-template-columns:28px 1fr auto;gap:14px;align-items:start;text-decoration:none;color:inherit;transition:filter 0.15s;}
+    .item:hover{filter:brightness(1.3);}
+    .zone-models .item{background:#031a03;border-color:#1a3d1a;}
+    .zone-research .item{background:#02101f;border-color:#0d2a4a;}
+    .zone-tools .item{background:#0f0520;border-color:#2a1060;}
+    .zone-funding .item{background:#1a0e00;border-color:#3d2000;}
+    .zone-policy .item{background:#180005;border-color:#3d0015;}
+    .item-num{font-family:'JetBrains Mono',monospace;font-size:10px;opacity:0.4;padding-top:3px;}
+    .item-title{font-size:14px;font-weight:600;line-height:1.4;margin-bottom:5px;}
+    .item-summary{font-size:12px;color:#8b949e;line-height:1.6;}
+    .item-source{font-family:'JetBrains Mono',monospace;font-size:10px;color:#58a6ff;white-space:nowrap;}
+    footer{text-align:center;padding:24px 40px;font-family:'JetBrains Mono',monospace;font-size:10px;color:#555;border-top:1px solid #21262d;background:#080c0f;}
+    @media(max-width:768px){header,.zone{padding:20px 16px;}.item{grid-template-columns:20px 1fr;}.item-source{display:none;}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="term-bar">wally@hq:~$ <span>./ai-news --today --format=feed</span></div>
+    <h1>AI/<em>news</em> <span class="blink">_</span></h1>
+    <div class="meta">Compiled <span id="d"></span> &nbsp;&middot;&nbsp; 48h window &nbsp;&middot;&nbsp; Status: <span style="color:#39ff14">&#9679; LIVE</span></div>
+  </header>
+
+  <div class="zone zone-models">
+    <div class="zone-label">Models &amp; Releases</div>
+    <div class="feed">
+      <a class="item" href="https://www.ft.com/content/e3366881-0622-40a7-9c34-a0d82e3d573e" target="_blank" rel="noopener">
+        <div class="item-num">01</div>
+        <div>
+          <div class="item-title">DeepSeek V4 Imminent &mdash; Multimodal Model Poised to Rattle US Rivals</div>
+          <div class="item-summary">China&rsquo;s DeepSeek is preparing to release V4, a multimodal model capable of processing pictures, video, and text, with a first-week-of-March window now considered most probable. The lab has deliberately withheld early API access from US chipmakers including Nvidia, instead granting it to domestic suppliers like Huawei &mdash; a calculated escalation of the US&ndash;China AI rivalry.</div>
+        </div>
+        <div class="item-source">ft.com &middot; Feb 28</div>
+      </a>
+      <a class="item" href="https://deepmind.google/models/model-cards/gemini-3-1-flash-image/" target="_blank" rel="noopener">
+        <div class="item-num">02</div>
+        <div>
+          <div class="item-title">Google Ships Gemini 3.1 Flash Image; Kills Gemini 3 Pro Preview March 9</div>
+          <div class="item-summary">Google DeepMind published the model card for Gemini 3.1 Flash Image, extending the 3.1 series with enhanced multimodal image generation at reduced latency and cost. Google simultaneously announced Gemini 3 Pro Preview will be discontinued on March 9, 2026, pressing developers to migrate to 3.1 Pro on Vertex AI.</div>
+        </div>
+        <div class="item-source">deepmind.google &middot; Feb 26</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="zone zone-research">
+    <div class="zone-label">Research &amp; Papers</div>
+    <div class="feed">
+      <a class="item" href="https://arxiv.org/html/2602.23079v1" target="_blank" rel="noopener">
+        <div class="item-num">03</div>
+        <div>
+          <div class="item-title">ETH Zurich &amp; Google: LLMs Can Deanonymize You From Your Online Posts</div>
+          <div class="item-summary">Researchers at ETH Zurich and Google&rsquo;s Nicholas Carlini demonstrated that LLM agents using stylometric analysis can reliably identify anonymous users across Hacker News, Reddit, LinkedIn, and anonymized interview transcripts with high accuracy. The paper reveals a novel privacy attack requiring no special access &mdash; just the model and public posts &mdash; with serious implications for journalists, activists, and anyone relying on pseudonymity.</div>
+        </div>
+        <div class="item-source">arxiv.org &middot; Feb 26</div>
+      </a>
+      <a class="item" href="https://www.tandfonline.com/doi/full/10.1080/0144929X.2026.2633771" target="_blank" rel="noopener">
+        <div class="item-num">04</div>
+        <div>
+          <div class="item-title">Study: AI Explanation Style Shapes Human Closeness, Not Just Comprehension</div>
+          <div class="item-summary">A new study in Behaviour &amp; Information Technology finds that how AI systems explain their reasoning significantly affects users&rsquo; emotional closeness and trust, well beyond mere comprehension of outputs. The dual-role framework the researchers propose has direct implications for designing AI copilots, medical assistants, and agentic systems where user rapport is critical.</div>
+        </div>
+        <div class="item-source">tandfonline.com &middot; Feb 28</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="zone zone-tools">
+    <div class="zone-label">Tools &amp; Products</div>
+    <div class="feed">
+      <a class="item" href="https://techcrunch.com/2026/02/27/perplexitys-new-computer-is-another-bet-that-users-need-many-ai-models/" target="_blank" rel="noopener">
+        <div class="item-num">05</div>
+        <div>
+          <div class="item-title">Perplexity Launches &ldquo;Computer&rdquo; &mdash; 19 AI Models Working in Parallel</div>
+          <div class="item-summary">Perplexity released &ldquo;Perplexity Computer,&rdquo; an agentic cloud system that orchestrates 19 AI models simultaneously to handle research, coding, design, and full project deployment from a single prompt. The product runs entirely in the cloud and is gated behind the $200/month Perplexity Max tier, positioning it squarely at enterprise and power users.</div>
+        </div>
+        <div class="item-source">techcrunch.com &middot; Feb 27</div>
+      </a>
+      <a class="item" href="https://www.wealthmanagement.com/artificial-intelligence/ai-integrations-expand-across-wealth-management-platforms-this-week" target="_blank" rel="noopener">
+        <div class="item-num">06</div>
+        <div>
+          <div class="item-title">Anthropic Targets Finance: Wealth Management AI Tools Go Live</div>
+          <div class="item-summary">Anthropic launched dedicated AI tools for wealth management platforms this week, with multiple financial advisory firms announcing integrations as the sector pivots from experimentation to production deployment. The rollout signals a broader 2026 shift: AI is moving from demos to revenue-generating workflows inside highly regulated industries.</div>
+        </div>
+        <div class="item-source">wealthmanagement.com &middot; Feb 27</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="zone zone-funding">
+    <div class="zone-label">Funding &amp; Business</div>
+    <div class="feed">
+      <a class="item" href="https://www.nytimes.com/2026/02/27/business/openai-funding.html" target="_blank" rel="noopener">
+        <div class="item-num">07</div>
+        <div>
+          <div class="item-title">OpenAI Closes $110B Round Led by Amazon, Nvidia &amp; SoftBank &mdash; Valued at $730B+</div>
+          <div class="item-summary">OpenAI announced the largest private fundraise in tech history: $110 billion, with Amazon committing approximately $50 billion, putting the company&rsquo;s valuation between $730&ndash;840 billion. The raise cements OpenAI&rsquo;s war-chest advantage heading into a year where model training costs and agentic infrastructure buildout are both accelerating rapidly.</div>
+        </div>
+        <div class="item-source">nytimes.com &middot; Feb 27</div>
+      </a>
+      <a class="item" href="https://www.cnn.com/2026/02/26/business/block-layoffs-ai-jack-dorsey" target="_blank" rel="noopener">
+        <div class="item-num">08</div>
+        <div>
+          <div class="item-title">Block Cuts 4,000 Jobs &mdash; Jack Dorsey Explicitly Credits AI</div>
+          <div class="item-summary">Jack Dorsey&rsquo;s payments company Block laid off nearly half its workforce (4,000 of 10,000 employees) in what the CEO described plainly as a consequence of AI advances making a leaner headcount viable. Dorsey warned this is not a one-off, predicting most companies will follow suit &mdash; setting off a week-long market and media reckoning about white-collar AI displacement.</div>
+        </div>
+        <div class="item-source">cnn.com &middot; Feb 26</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="zone zone-policy">
+    <div class="zone-label">Policy &amp; Safety</div>
+    <div class="feed">
+      <a class="item" href="https://www.npr.org/2026/02/27/nx-s1-5729118/trump-anthropic-pentagon-openai-ai-weapons-ban" target="_blank" rel="noopener">
+        <div class="item-num">09</div>
+        <div>
+          <div class="item-title">Trump Orders All Federal Agencies to Drop Anthropic After Pentagon Standoff</div>
+          <div class="item-summary">President Trump ordered all U.S. agencies to immediately cease using Anthropic&rsquo;s AI products after the company refused Pentagon demands to remove safety policies barring AI use in autonomous weapons and mass surveillance of Americans. The clash &mdash; which culminated in Anthropic missing a Friday compliance deadline &mdash; marks the most consequential collision between AI safety principles and government power since the technology went mainstream.</div>
+        </div>
+        <div class="item-source">npr.org &middot; Feb 27</div>
+      </a>
+      <a class="item" href="https://www.reuters.com/business/openai-reaches-deal-deploy-ai-models-us-department-war-classified-network-2026-02-28/" target="_blank" rel="noopener">
+        <div class="item-num">10</div>
+        <div>
+          <div class="item-title">OpenAI Steps In: Inks Pentagon Deal to Deploy Models on Classified Networks</div>
+          <div class="item-summary">Hours after the Trump administration froze out Anthropic, OpenAI announced a deal with the U.S. Department of War to deploy its AI models on classified cloud infrastructure, effectively filling the void its rival vacated. The back-to-back moves crystallize the strategic fork facing AI labs in 2026: maintain safety commitments and lose government contracts, or accommodate national security demands and accept the reputational risk.</div>
+        </div>
+        <div class="item-source">reuters.com &middot; Feb 28</div>
+      </a>
+    </div>
+  </div>
+
+  <footer>AI News Daily &nbsp;&middot;&nbsp; wally@hq &nbsp;&middot;&nbsp; Refreshed daily at 07:00 EST</footer>
+  <script>document.getElementById('d').textContent=new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});</script>
+</body>
+</html>
