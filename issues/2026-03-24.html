@@ -6,192 +6,49 @@
   <title>AI News &mdash; March 24, 2026</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --bg: #0a0a0f;
-      --surface: #111118;
-      --surface2: #18181f;
-      --border: #1e1e2a;
-      --accent: #6b6bff;
-      --accent2: #a78bfa;
-      --text: #e8e8f0;
-      --text-muted: #7070a0;
-      --text-dim: #50506a;
-      --lead: #c4b5fd;
+      --bg: #0a0a0f; --surface: #111118; --surface2: #18181f; --border: #1e1e2a;
+      --accent: #6b6bff; --accent2: #a78bfa; --text: #e8e8f0;
+      --text-muted: #7070a0; --text-dim: #50506a; --lead: #c4b5fd;
     }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'SF Pro Display', 'Helvetica Neue', system-ui, sans-serif;
-      font-size: 15px;
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-
-    header {
-      background: linear-gradient(135deg, #0d0d1a 0%, #111128 50%, #0a0a14 100%);
-      border-bottom: 1px solid var(--border);
-      padding: 2.5rem 1.5rem 2rem;
-      text-align: center;
-    }
-
-    .header-label {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--text);
-      letter-spacing: -0.02em;
-    }
-
-    .header-date {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-top: 0.4rem;
-    }
-
-    .header-count {
-      font-size: 0.72rem;
-      color: var(--text-dim);
-      margin-top: 0.2rem;
-    }
-
-    .lead-section {
-      padding: 1.5rem 1.5rem 0.5rem;
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .lead-section-title {
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.75rem;
-    }
-
-    .lead-card {
-      padding: 0.6rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-
+    body { background: var(--bg); color: var(--text); font-family: 'SF Pro Display', 'Helvetica Neue', system-ui, sans-serif; font-size: 15px; line-height: 1.6; min-height: 100vh; }
+    header { background: linear-gradient(135deg, #0d0d1a 0%, #111128 50%, #0a0a14 100%); border-bottom: 1px solid var(--border); padding: 2.5rem 1.5rem 2rem; text-align: center; }
+    .header-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+    header h1 { font-size: 2rem; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
+    .header-date { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem; }
+    .header-count { font-size: 0.72rem; color: var(--text-dim); margin-top: 0.2rem; }
+    .lead-section { padding: 1.5rem 1.5rem 0.5rem; max-width: 760px; margin: 0 auto; }
+    .lead-section-title { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+    .lead-card { padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
     .lead-card:last-child { border-bottom: none; }
-
-    .lead-title {
-      display: block;
-      color: var(--lead);
-      font-size: 0.98rem;
-      font-weight: 600;
-      text-decoration: none;
-      line-height: 1.4;
-    }
-
+    .lead-title { display: block; color: var(--lead); font-size: 0.98rem; font-weight: 600; text-decoration: none; line-height: 1.4; }
     .lead-title:hover { color: var(--accent2); }
-
-    .lead-source {
-      font-size: 0.7rem;
-      color: var(--text-dim);
-      margin-top: 0.2rem;
-      display: block;
-    }
-
-    .divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 1rem 0;
-    }
-
-    main {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 0 1.5rem 3rem;
-    }
-
-    .news-section {
-      margin-bottom: 2rem;
-    }
-
-    .section-title {
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.75rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .news-card {
-      padding: 0.6rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-
+    .lead-source { font-size: 0.7rem; color: var(--text-dim); margin-top: 0.2rem; display: block; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 1rem 0; }
+    main { max-width: 760px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+    .news-section { margin-bottom: 2rem; }
+    .section-title { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    .news-card { padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
     .news-card:last-child { border-bottom: none; }
-
-    .card-title {
-      display: block;
-      color: var(--text);
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      line-height: 1.4;
-    }
-
+    .card-title { display: block; color: var(--text); font-size: 0.9rem; font-weight: 500; text-decoration: none; line-height: 1.4; }
     .card-title:hover { color: var(--accent2); }
-
-    .card-summary {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-top: 0.3rem;
-      line-height: 1.5;
-    }
-
-    .card-source {
-      font-size: 0.68rem;
-      color: var(--text-dim);
-      margin-top: 0.25rem;
-      display: block;
-    }
-
-    .no-stories {
-      font-size: 0.82rem;
-      color: var(--text-dim);
-      padding: 0.5rem 0;
-      font-style: italic;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1.5rem;
-      font-size: 0.72rem;
-      color: var(--text-dim);
-      border-top: 1px solid var(--border);
-    }
+    .card-summary { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem; line-height: 1.5; }
+    .card-source { font-size: 0.68rem; color: var(--text-dim); margin-top: 0.25rem; display: block; }
+    .no-stories { font-size: 0.82rem; color: var(--text-dim); padding: 0.5rem 0; font-style: italic; }
+    footer { text-align: center; padding: 2rem 1.5rem; font-size: 0.72rem; color: var(--text-dim); border-top: 1px solid var(--border); }
   </style>
 </head>
 <body>
-
   <header>
     <div class="header-label">Daily Intelligence</div>
     <h1>AI News</h1>
     <div class="header-date">March 24, 2026</div>
     <div class="header-count">36 stories</div>
   </header>
-
   <div class="lead-section">
     <div class="lead-section-title">Top Stories</div>
       <div class="lead-card">
-        <a href="https://www.theverge.com/ai-artificial-intelligence/899086/jensen-huang-nvidia-agi" class="lead-title" target="_blank" rel="noopener">Nvidia CEO Jensen Huang says &amp;#8216;I think we&amp;#8217;ve achieved AGI&amp;#8217;</a>
+        <a href="https://www.theverge.com/ai-artificial-intelligence/899086/jensen-huang-nvidia-agi" class="lead-title" target="_blank" rel="noopener">Nvidia CEO Jensen Huang says ‘I think we’ve achieved AGI’</a>
         <span class="lead-source">The Verge</span>
       </div>
       <div class="lead-card">
@@ -211,9 +68,7 @@
         <span class="lead-source">VentureBeat</span>
       </div>
   </div>
-
   <div class="divider"></div>
-
   <main>
       <section class="news-section">
         <h2 class="section-title">The Verge</h2>
@@ -234,7 +89,7 @@
           <span class="card-source">The Verge</span>
         </div>
         <div class="news-card">
-          <a href="https://www.theverge.com/ai-artificial-intelligence/899086/jensen-huang-nvidia-agi" class="card-title" target="_blank" rel="noopener">Nvidia CEO Jensen Huang says &amp;#8216;I think we&amp;#8217;ve achieved AGI&amp;#8217;</a>
+          <a href="https://www.theverge.com/ai-artificial-intelligence/899086/jensen-huang-nvidia-agi" class="card-title" target="_blank" rel="noopener">Nvidia CEO Jensen Huang says ‘I think we’ve achieved AGI’</a>
           <span class="card-source">The Verge</span>
         </div>
       </section>
@@ -402,10 +257,8 @@
         </div>
       </section>
   </main>
-
   <footer>
     AI News &mdash; March 24, 2026 &mdash; Automated daily intelligence briefing
   </footer>
-
 </body>
 </html>
