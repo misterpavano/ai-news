@@ -1,209 +1,791 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI News &mdash; April 2, 2026</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI News - 2026-04-04</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0f0f0f;
+    --bg-card: #1a1a1a;
+    --text: #e8e8e8;
+    --text-muted: #888;
+    --accent: #4ade80;
+    --accent-dim: rgba(74, 222, 128, 0.12);
+    --border: #2a2a2a;
+    --radius: 6px;
+  }
+
+  @media (prefers-color-scheme: light) {
     :root {
-      --bg: #0a0a0f; --surface: #111118; --surface2: #18181f; --border: #1e1e2a;
-      --accent: #6b6bff; --accent2: #a78bfa; --text: #e8e8f0;
-      --text-muted: #7070a0; --text-dim: #50506a; --lead: #c4b5fd;
+      --bg: #fafafa;
+      --bg-card: #ffffff;
+      --text: #1a1a1a;
+      --text-muted: #666;
+      --accent: #16a34a;
+      --accent-dim: rgba(22, 163, 74, 0.08);
+      --border: #e0e0e0;
     }
-    body { background: var(--bg); color: var(--text); font-family: 'SF Pro Display', 'Helvetica Neue', system-ui, sans-serif; font-size: 15px; line-height: 1.6; min-height: 100vh; }
-    header { background: linear-gradient(135deg, #0d0d1a 0%, #111128 50%, #0a0a14 100%); border-bottom: 1px solid var(--border); padding: 2.5rem 1.5rem 2rem; text-align: center; }
-    .header-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
-    header h1 { font-size: 2rem; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
-    .header-date { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem; }
-    .header-count { font-size: 0.72rem; color: var(--text-dim); margin-top: 0.2rem; }
-    .lead-section { padding: 1.5rem 1.5rem 0.5rem; max-width: 760px; margin: 0 auto; }
-    .lead-section-title { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
-    .lead-card { padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
-    .lead-card:last-child { border-bottom: none; }
-    .lead-title { display: block; color: var(--lead); font-size: 0.98rem; font-weight: 600; text-decoration: none; line-height: 1.4; }
-    .lead-title:hover { color: var(--accent2); }
-    .lead-source { font-size: 0.7rem; color: var(--text-dim); margin-top: 0.2rem; display: block; }
-    .divider { border: none; border-top: 1px solid var(--border); margin: 1rem 0; }
-    main { max-width: 760px; margin: 0 auto; padding: 0 1.5rem 3rem; }
-    .news-section { margin-bottom: 2rem; }
-    .section-title { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
-    .news-card { padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
-    .news-card:last-child { border-bottom: none; }
-    .card-title { display: block; color: var(--text); font-size: 0.9rem; font-weight: 500; text-decoration: none; line-height: 1.4; }
-    .card-title:hover { color: var(--accent2); }
-    .card-summary { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem; line-height: 1.5; }
-    .card-source { font-size: 0.68rem; color: var(--text-dim); margin-top: 0.25rem; display: block; }
-    .card-tag { display: inline-block; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent2); background: rgba(167,139,250,0.1); padding: 0.1rem 0.4rem; border-radius: 3px; margin-right: 0.4rem; }
-    .no-stories { font-size: 0.82rem; color: var(--text-dim); padding: 0.5rem 0; font-style: italic; }
-    footer { text-align: center; padding: 2rem 1.5rem; font-size: 0.72rem; color: var(--text-dim); border-top: 1px solid var(--border); }
-  </style>
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 32px 20px;
+  }
+
+  /* ── Header ── */
+  .header {
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .header .tagline {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .header .date {
+    font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+  }
+
+  /* ── Sections ── */
+  .section {
+    margin-bottom: 36px;
+  }
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--accent);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── Story cards ── */
+  .story {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    transition: border-color 0.15s ease;
+  }
+
+  .story:hover {
+    border-color: var(--accent);
+  }
+
+  .story-title a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .story-title a:hover {
+    color: var(--accent);
+  }
+
+  .story-summary {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .source-badge {
+    background: var(--accent-dim);
+    color: var(--accent);
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  /* ── Empty state ── */
+  .empty {
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 13px;
+    padding: 12px 0;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 680px) {
+    .container { padding: 20px 16px; }
+    .header h1 { font-size: 24px; }
+    .story { padding: 12px 14px; }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <div class="header-label">Daily Intelligence</div>
+<div class="container">
+
+  <div class="header">
     <h1>AI News</h1>
-    <div class="header-date">April 2, 2026</div>
-    <div class="header-count">22 stories</div>
-  </header>
-  <div class="lead-section">
-    <div class="lead-section-title">Top Stories</div>
-      <div class="lead-card">
-        <a href="https://www.thecooldown.com/green-business/openai-funding-round-122-billion-valuation/" class="lead-title" target="_blank" rel="noopener">OpenAI Secures $122 Billion in Record Funding Round</a>
-        <span class="lead-source">Whalesbook / FinSMEs / Electronics Bazaar</span>
-      </div>
-      <div class="lead-card">
-        <a href="https://techcrunch.com/2026/04/01/anthropic-took-down-thousands-of-github-repos-trying-to-yank-its-leaked-source-code-a-move-the-company-says-was-an-accident/" class="lead-title" target="_blank" rel="noopener">Anthropic took down thousands of GitHub repos trying to yank its leaked source code</a>
-        <span class="lead-source">TechCrunch</span>
-      </div>
-      <div class="lead-card">
-        <a href="https://www.theedgesingapore.com/news/tech/alibaba-unveils-third-closed-source-ai-model-focus-profit" class="lead-title" target="_blank" rel="noopener">Alibaba Unveils New Closed-Source AI Model Qwen3.6-Plus</a>
-        <span class="lead-source">The Edge Singapore</span>
-      </div>
-      <div class="lead-card">
-        <a href="https://techcrunch.com/2026/04/01/system-failure-paralyzes-baidu-robotaxis-in-china/" class="lead-title" target="_blank" rel="noopener">&#x2018;System failure&#x2019; paralyzes Baidu robotaxis in China</a>
-        <span class="lead-source">TechCrunch</span>
-      </div>
-      <div class="lead-card">
-        <a href="https://venturebeat.com/security/claude-code-512000-line-source-leak-attack-paths-audit-security-leaders" class="lead-title" target="_blank" rel="noopener">In the wake of Claude Code&#x27;s source code leak, 5 actions enterprise security leaders should take now</a>
-        <span class="lead-source">VentureBeat</span>
-      </div>
+    
+    <div class="tagline">Your daily AI intelligence brief</div>
+    
+    <div class="date">2026-04-04</div>
   </div>
-  <hr class="divider">
-  <main>
-      <section class="news-section">
-        <h2 class="section-title">The Verge</h2>
-        <div class="news-card">
-          <a href="https://www.theverge.com/policy/905649/trump-supreme-court-birthright-citizenship-scotus-arguments" class="card-title" target="_blank" rel="noopener">Trump&#x2019;s birthright citizenship ban may fail &#x2014; but the administration already got too far</a>
-          <span class="card-source">The Verge</span>
-        </div>
-        <div class="news-card">
-          <a href="https://www.theverge.com/science/904458/nasa-artemis-ii-mission-moon-astronauts" class="card-title" target="_blank" rel="noopener">NASA launches four astronauts toward the Moon on the Artemis II mission</a>
-          <span class="card-source">The Verge</span>
-        </div>
-        <div class="news-card">
-          <a href="https://www.theverge.com/science/905406/artemis-ii-moon-base-law" class="card-title" target="_blank" rel="noopener">The Artemis Moon base project is legally dubious</a>
-          <span class="card-source">The Verge</span>
-        </div>
-        <div class="news-card">
-          <a href="https://www.theverge.com/tech/905398/apple-iphone-anniversary-jobs-release" class="card-title" target="_blank" rel="noopener">Everything is iPhone now</a>
-          <span class="card-source">The Verge</span>
-        </div>
-        <div class="news-card">
-          <a href="https://www.theverge.com/tldr/904346/april-fools-day-2026-pranks-jokes-best-worst" class="card-title" target="_blank" rel="noopener">April Fools&#x27; Day 2026: the best and cringiest pranks</a>
-          <span class="card-source">The Verge</span>
-        </div>
-      </section>
 
-      <section class="news-section">
-        <h2 class="section-title">TechCrunch</h2>
-        <div class="news-card">
-          <a href="https://techcrunch.com/2026/04/01/de-fi-platform-drift-suspends-deposits-and-withdrawals-after-millions-in-crypto-stolen-in-hack/" class="card-title" target="_blank" rel="noopener">De-fi platform Drift suspends deposits and withdrawals after millions in crypto stolen in hack</a>
-          <span class="card-source">TechCrunch</span>
-        </div>
-        <div class="news-card">
-          <a href="https://techcrunch.com/2026/04/01/anthropic-took-down-thousands-of-github-repos-trying-to-yank-its-leaked-source-code-a-move-the-company-says-was-an-accident/" class="card-title" target="_blank" rel="noopener">Anthropic took down thousands of GitHub repos trying to yank its leaked source code &#x2014; a move the company says was an accident</a>
-          <span class="card-source">TechCrunch</span>
-        </div>
-        <div class="news-card">
-          <a href="https://techcrunch.com/2026/04/01/the-reputation-of-troubled-yc-startup-delve-has-gotten-even-worse/" class="card-title" target="_blank" rel="noopener">The reputation of troubled YC startup Delve has gotten even worse</a>
-          <span class="card-source">TechCrunch</span>
-        </div>
-        <div class="news-card">
-          <a href="https://techcrunch.com/2026/04/01/system-failure-paralyzes-baidu-robotaxis-in-china/" class="card-title" target="_blank" rel="noopener">&#x2018;System failure&#x2019; paralyzes Baidu robotaxis in China</a>
-          <span class="card-source">TechCrunch</span>
-        </div>
-        <div class="news-card">
-          <a href="https://techcrunch.com/2026/04/01/a-new-dating-app-sonder-has-a-deliberately-annoying-sign-up-process-and-its-working/" class="card-title" target="_blank" rel="noopener">A new dating app, Sonder, has a deliberately annoying sign-up process (and it&#x27;s working)</a>
-          <span class="card-source">TechCrunch</span>
-        </div>
-      </section>
+  
+  
+  <div class="section">
+    <div class="section-title">verge</div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://www.theverge.com/reviews/906455/anker-nebula-p1-review-vanlife-sound-champ" target="_blank" rel="noopener">Anker’s Nebula P1 projector is the portable sound king</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">The Verge</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://www.theverge.com/ai-artificial-intelligence/907074/anthropic-openclaw-claude-subscription-ban" target="_blank" rel="noopener">Anthropic essentially bans OpenClaw from Claude by making subscribers pay extra</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">The Verge</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://www.theverge.com/science/906988/nasa-artemis-ii-microsoft-outlook-issue-fixed" target="_blank" rel="noopener">NASA did eventually solve Artemis II&amp;#8217;s Outlook glitch</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">The Verge</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://www.theverge.com/ai-artificial-intelligence/906965/openais-agi-boss-is-taking-a-leave-of-absence" target="_blank" rel="noopener">OpenAI’s AGI boss is taking a leave of absence</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">The Verge</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://www.theverge.com/games/906752/lenovo-legion-go-2-suddenly-costs-650-more-as-ramageddon-lays-waste-to-gaming-hardware" target="_blank" rel="noopener">Lenovo Legion Go 2 suddenly costs $650 more as RAMageddon lays waste to gaming hardware</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">The Verge</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+  
+  
+  <div class="section">
+    <div class="section-title">techcrunch</div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://techcrunch.com/2026/04/03/anthropic-is-having-a-moment-in-the-private-markets-spacex-could-spoil-the-party/" target="_blank" rel="noopener">Anthropic is having a moment in the private markets; SpaceX could spoil the party</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">TechCrunch</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://techcrunch.com/2026/04/03/lucid-blames-dip-in-q1-sales-on-seat-supplier-issue/" target="_blank" rel="noopener">Lucid blames dip in Q1 sales on seat supplier issue</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">TechCrunch</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://techcrunch.com/2026/04/03/the-anonymous-social-app-that-thinks-it-can-work-in-saudi-arabia/" target="_blank" rel="noopener">The anonymous social app that thinks it can work in Saudi Arabia</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">TechCrunch</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://techcrunch.com/2026/04/03/teslas-texas-factory-workforce-reportedly-shrunk-22-in-2025/" target="_blank" rel="noopener">Tesla’s Texas factory workforce reportedly shrunk 22% in 2025</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">TechCrunch</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://techcrunch.com/2026/04/03/openai-executive-shuffle-new-roles-coo-brad-lightcap-fidji-simo-kate-rouch/" target="_blank" rel="noopener">OpenAI executive shuffle includes new role for COO Brad Lightcap to lead ‘special projects’</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">TechCrunch</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+  
+  
+  <div class="section">
+    <div class="section-title">mittr</div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://www.technologyreview.com/2026/04/03/1135073/four-things-wed-need-to-put-data-centers-in-space/" target="_blank" rel="noopener">Four things we’d need to put data centers in space</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">MIT Tech Review</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://www.technologyreview.com/2026/04/02/1135049/the-download-plastic-problem-fuel-prices-spacex-ipo/" target="_blank" rel="noopener">The Download: plastic’s problem with fuel prices, and SpaceX’s blockbuster IPO</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">MIT Tech Review</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://www.technologyreview.com/2026/04/02/1135045/plastic-economic-effects/" target="_blank" rel="noopener">Fuel prices are soaring. Plastic could be next.</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">MIT Tech Review</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://www.technologyreview.com/2026/04/01/1134993/the-download-gig-workers-training-humanoids-better-ai-benchmarks/" target="_blank" rel="noopener">The Download: gig workers training humanoids, and better AI benchmarks</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">MIT Tech Review</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+  
+  
+  <div class="section">
+    <div class="section-title">ars</div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://arstechnica.com/security/2026/04/heres-why-its-prudent-for-openclaw-users-to-assume-compromise/" target="_blank" rel="noopener">OpenClaw gives users yet another reason to be freaked out about security</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">Ars Technica</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://arstechnica.com/security/2026/04/new-rowhammer-attacks-give-complete-control-of-machines-running-nvidia-gpus/" target="_blank" rel="noopener">New Rowhammer attacks give complete control of machines running Nvidia GPUs</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">Ars Technica</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://arstechnica.com/security/2026/03/new-quantum-computing-advances-heighten-threat-to-elliptic-curve-cryptosystems/" target="_blank" rel="noopener">Quantum computers need vastly fewer resources than thought to break vital encryption</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">Ars Technica</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://arstechnica.com/security/2026/03/google-bumps-up-q-day-estimate-to-2029-far-sooner-than-previously-thought/" target="_blank" rel="noopener">Google bumps up Q Day deadline to 2029, far sooner than previously thought</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">Ars Technica</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://arstechnica.com/security/2026/03/self-propagating-malware-poisons-open-source-software-and-wipes-iran-based-machines/" target="_blank" rel="noopener">Self-propagating malware poisons open source software and wipes Iran-based machines</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">Ars Technica</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+  
+  
+  <div class="section">
+    <div class="section-title">venturebeat</div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://venturebeat.com/technology/anthropic-cuts-off-the-ability-to-use-claude-subscriptions-with-openclaw-and" target="_blank" rel="noopener">Anthropic cuts off the ability to use Claude subscriptions with OpenClaw and third-party AI agents</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">VentureBeat</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://venturebeat.com/data/karpathy-shares-llm-knowledge-base-architecture-that-bypasses-rag-with-an" target="_blank" rel="noopener">Karpathy shares &#39;LLM Knowledge Base&#39; architecture that bypasses RAG with an evolving markdown library maintained by AI</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">VentureBeat</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://venturebeat.com/technology/nvidia-launches-enterprise-ai-agent-platform-with-adobe-salesforce-sap-among" target="_blank" rel="noopener">Nvidia launches enterprise AI agent platform with Adobe, Salesforce, SAP among 17 adopters at GTC 2026</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">VentureBeat</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://venturebeat.com/technology/microsoft-launches-3-new-ai-models-in-direct-shot-at-openai-and-google" target="_blank" rel="noopener">Microsoft launches 3 new AI models in direct shot at OpenAI and Google</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">VentureBeat</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://venturebeat.com/technology/arcees-new-open-source-trinity-large-thinking-is-the-rare-powerful-u-s-made" target="_blank" rel="noopener">Arcee&#39;s new, open source Trinity-Large-Thinking is the rare, powerful U.S.-made AI model that enterprises can download and customize</a>
+      </div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">VentureBeat</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+  
+  
+  <div class="section">
+    <div class="section-title">model releases</div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://aibusiness.com/generative-ai/google-launches-open-model-family-gemma-4" target="_blank" rel="noopener">Anthropic&#39;s Claude Mythos 5 Marks Historical Milestone</a>
+      </div>
+      
+      <div class="story-summary">Anthropic&#39;s Claude Mythos 5 has been released, representing a historical milestone as the first widely recognized ten-trillion-parameter model. This frontier-class model is engineered for high-stakes environments like cybersecurity and complex coding.</div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">devFlokers</span>
+        
+        
+        <span>2026-04-03</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" target="_blank" rel="noopener">Google DeepMind Introduces Gemini 3.1</a>
+      </div>
+      
+      <div class="story-summary">Google DeepMind launched Gemini 3.1, a suite of models emphasizing native multimodal reasoning and real-time processing. The flagship Gemini 3.1 Ultra achieved a 94.3% score on the GPQA Diamond benchmark.</div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">devFlokers</span>
+        
+        
+        <span>2026-04-03</span>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+  
+  
+  <div class="section">
+    <div class="section-title">funding</div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://www.devflokers.com/blog/ai-news-last-24-hours-april-2026-model-releases-breakthroughs" target="_blank" rel="noopener">GALAXEA Raises 3 Billion Yuan, Valuation Exceeds 20 Billion Yuan</a>
+      </div>
+      
+      <div class="story-summary">Embodied AI startup GALAXEA secured an additional 2 billion yuan in a Series B+ extension, bringing its total raised in two months to 3 billion yuan. This rapid funding has doubled its valuation past the 20 billion yuan mark, signaling a potential IPO.</div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">Gasgoo</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://autonews.gasgoo.com/articles/news/3-billion-yuan-raised-in-two-months-valuation-breaks-20-billion-yuan-what-is-galaxeas-edge-2040321874859307009" target="_blank" rel="noopener">Anthropic Acquires Stealth AI Biology Startup Coefficient Bio for $400 Million</a>
+      </div>
+      
+      <div class="story-summary">Anthropic has reportedly acquired Coefficient Bio, a stealth AI biology startup, in an all-stock deal valued at over $400 million. This acquisition expands Anthropic&#39;s portfolio into life sciences AI as it eyes a potential IPO.</div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">Benzinga</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://autonews.gasgoo.com/articles/market-industry/3-billion-yuan-raised-in-two-months-valuation-breaks-20-billion-yuan-what-is-galaxeas-edge-2040321874859307009" target="_blank" rel="noopener">Moonbounce Secures $12 Million for Real-Time AI Control</a>
+      </div>
+      
+      <div class="story-summary">Oakland-based startup Moonbounce raised $12 million in Series A funding to develop technology for real-time control over AI system behavior. Their platform helps organizations monitor and adjust AI models in production to address safety and bias concerns.</div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">Oakland Today</span>
+        
+        
+        <span>2026-04-03</span>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+  
+  
+  <div class="section">
+    <div class="section-title">research papers</div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://www.benzinga.com/m-a/26/04/51649388/anthropic-acquires-stealth-startup-coefficient-bio-400-million" target="_blank" rel="noopener">Google Research Evaluates LLM Behavioral Alignment</a>
+      </div>
+      
+      <div class="story-summary">Google Research published a study evaluating the alignment of behavioral dispositions in large language models. The framework assesses LLMs&#39; behavioral tendencies in realistic user-assistant scenarios, revealing gaps where model dispositions deviate from human consensus.</div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">Google Research</span>
+        
+        
+        <span>2026-04-03</span>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+  
+  
+  <div class="section">
+    <div class="section-title">ai policy</div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://www.theregister.com/2026/04/02/ai_models_will_deceive_you/" target="_blank" rel="noopener">China Issues Draft Rules to Regulate Digital Humans</a>
+      </div>
+      
+      <div class="story-summary">China&#39;s Cyberspace Administration published draft rules on April 4, 2026, to regulate &#34;digital humans.&#34; The rules require prominent labeling, bar virtual intimate relationships for minors, and restrict politically sensitive or harmful content.</div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">Let&#39;s Data Science</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://www.gavi.org/vaccineswork/why-ai-health-chatbots-wont-make-you-better-diagnosing-yourself-new-research" target="_blank" rel="noopener">Tech Nonprofits Warn Against Federal AI Procurement Rules</a>
+      </div>
+      
+      <div class="story-summary">Tech nonprofits are raising concerns about new proposed rules for federal AI procurement by the General Services Administration. They argue that requirements for contractors to license AI systems for &#34;all lawful purposes&#34; and disable safety guardrails could undermine AI trust and safety.</div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">Transparency Coalition</span>
+        
+        
+        <span>2026-04-03</span>
+        
+      </div>
+    </div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://letsdatascience.com/news/china-issues-rules-for-digital-humans-341f6535" target="_blank" rel="noopener">State Legislatures Advance Various AI-Related Bills</a>
+      </div>
+      
+      <div class="story-summary">An April 3, 2026 update highlights a surge in state-level AI legislation across the US. Bills include chatbot safety measures, criminalizing AI imagery, and requirements for AI transparency and data privacy.</div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">Transparency Coalition</span>
+        
+        
+        <span>2026-04-03</span>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+  
+  
+  <div class="section">
+    <div class="section-title">github trending</div>
+    
+    <div class="story">
+      <div class="story-title">
+        <a href="https://github.com/sms021/SuperContext" target="_blank" rel="noopener">sms021/SuperContext</a>
+      </div>
+      
+      <div class="story-summary">A universal framework for giving AI coding assistants persistent memory and project intelligence across sessions. — 5 stars today.</div>
+      
+      <div class="story-meta">
+        
+        <span class="source-badge">GitHub Trending</span>
+        
+        
+        <span>2026-04-04</span>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+  
 
-      <section class="news-section">
-        <h2 class="section-title">MIT Technology Review</h2>
-        <div class="news-card">
-          <a href="https://www.technologyreview.com/2026/04/01/1134993/the-download-gig-workers-training-humanoids-better-ai-benchmarks/" class="card-title" target="_blank" rel="noopener">The Download: gig workers training humanoids, and better AI benchmarks</a>
-          <span class="card-source">MIT Tech Review</span>
-        </div>
-        <div class="news-card">
-          <a href="https://www.technologyreview.com/2026/04/01/1134863/humanoid-data-training-gig-economy-2026-breakthrough-technology/" class="card-title" target="_blank" rel="noopener">The gig workers who are training humanoid robots at home</a>
-          <span class="card-source">MIT Tech Review</span>
-        </div>
-      </section>
+  <div class="footer">
+    Built by Pavano &middot; 2026-04-04
+  </div>
 
-      <section class="news-section">
-        <h2 class="section-title">VentureBeat</h2>
-        <div class="news-card">
-          <a href="https://venturebeat.com/orchestration/the-end-of-shadow-ai-at-enterprises-kilo-launches-kiloclaw-for-organizations" class="card-title" target="_blank" rel="noopener">The end of &#x27;shadow AI&#x27; at enterprises? Kilo launches KiloClaw for Organizations to enable secure AI agents at scale</a>
-          <span class="card-source">VentureBeat</span>
-        </div>
-        <div class="news-card">
-          <a href="https://venturebeat.com/security/claude-code-512000-line-source-leak-attack-paths-audit-security-leaders" class="card-title" target="_blank" rel="noopener">In the wake of Claude Code&#x27;s source code leak, 5 actions enterprise security leaders should take now</a>
-          <span class="card-source">VentureBeat</span>
-        </div>
-        <div class="news-card">
-          <a href="https://venturebeat.com/orchestration/intuits-ai-agents-hit-85-repeat-usage-the-secret-was-keeping-humans-involved" class="card-title" target="_blank" rel="noopener">Intuit&#x27;s AI agents hit 85% repeat usage. The secret was keeping humans involved</a>
-          <span class="card-source">VentureBeat</span>
-        </div>
-      </section>
-
-      <section class="news-section">
-        <h2 class="section-title">Model Releases</h2>
-        <div class="news-card">
-          <a href="https://www.theedgesingapore.com/news/tech/alibaba-unveils-third-closed-source-ai-model-focus-profit" class="card-title" target="_blank" rel="noopener">Alibaba Unveils New Closed-Source AI Model Qwen3.6-Plus</a>
-          <p class="card-summary">Alibaba Group has released its third proprietary AI model in as many days, the agentic AI-focused Qwen3.6-Plus. This move reinforces the company&#x27;s strategy to monetize its AI services by keeping these models closed-source.</p>
-          <span class="card-source">The Edge Singapore</span>
-        </div>
-      </section>
-
-      <section class="news-section">
-        <h2 class="section-title">Funding</h2>
-        <div class="news-card">
-          <a href="https://english.news.cn/asiapacific/20260402/cb59cf38c3864a829c1664b2cb1d05dc/c.html" class="card-title" target="_blank" rel="noopener">Microsoft to Invest $5.5 Billion in Singapore AI Infrastructure</a>
-          <p class="card-summary">Microsoft announced a $5.5 billion investment over five years to expand its cloud and AI infrastructure in Singapore. This commitment, spanning 2025 to 2029, will support infrastructure development, operations, cybersecurity, and governance.</p>
-          <span class="card-source">Xinhua</span>
-        </div>
-        <div class="news-card">
-          <a href="https://www.thecooldown.com/green-business/openai-funding-round-122-billion-valuation/" class="card-title" target="_blank" rel="noopener">OpenAI Secures $122 Billion in Record Funding Round</a>
-          <p class="card-summary">OpenAI has closed a massive funding round of $122 billion, valuing the company at $852 billion. This record-breaking capital injection was primarily secured from Amazon, Nvidia, and SoftBank.</p>
-          <span class="card-source">Whalesbook / FinSMEs / Electronics Bazaar</span>
-        </div>
-        <div class="news-card">
-          <a href="https://www.electronicsforyou.biz/industry-buzz/openai-raises-122-billion-to-accelerate-the-next-phase-of-ai/" class="card-title" target="_blank" rel="noopener">Depthfirst Raises $80 Million in Series B for AI Cybersecurity</a>
-          <p class="card-summary">AI-native cybersecurity startup Depthfirst has successfully raised $80 million in a Series B funding round, bringing its total capital to $120 million. The company plans to use the funds to expand its AI research team and develop specialized security models.</p>
-          <span class="card-source">CXO Digitalpulse</span>
-        </div>
-      </section>
-
-      <section class="news-section">
-        <h2 class="section-title">Research Papers</h2>
-        <div class="news-card">
-          <a href="https://www.finsmes.com/2026/04/openai-closes-122-billion-funding-round-at-852-billion-valuation.html" class="card-title" target="_blank" rel="noopener">MIT Researchers Develop Framework for Ethical AI Evaluation</a>
-          <p class="card-summary">MIT researchers have created a new testing framework to identify instances where AI decision-support systems exhibit unfair treatment towards individuals and communities. This adaptive method uses large language models to capture stakeholder preferences and streamline ethical alignment evaluations.</p>
-          <span class="card-source">MIT News</span>
-        </div>
-        <div class="news-card">
-          <a href="https://www.cxodigitalpulse.com/depthfirst-raises-80-million-in-series-b-to-scale-ai-driven-cybersecurity-platform/" class="card-title" target="_blank" rel="noopener">UCLA Study Highlights AI&#x27;s Lack of &#x27;Body Experience&#x27;</a>
-          <p class="card-summary">A new study from UCLA Health suggests that current AI systems lack both physical interaction with the world and internal awareness of their own states, which impacts their behavior and trustworthiness. Published in Neuron, the paper proposes a &quot;dual-embodiment framework&quot; for future AI development.</p>
-          <span class="card-source">Mirage News</span>
-        </div>
-        <div class="news-card">
-          <a href="https://news.mit.edu/2026/evaluating-autonomous-systems-ethics-0402" class="card-title" target="_blank" rel="noopener">Gallup Study: AI is Routine for Most College Students</a>
-          <p class="card-summary">New research from the Lumina Foundation-Gallup 2026 State of Higher Education study reveals that over half of U.S. college students use AI in their coursework weekly, with a significant portion using it daily. The findings also indicate a gap between student AI use and institutional guidance.</p>
-          <span class="card-source">Gallup News</span>
-        </div>
-      </section>
-
-      <section class="news-section">
-        <h2 class="section-title">AI Policy</h2>
-        <p class="no-stories">No verified stories today.</p>
-      </section>
-
-      <section class="news-section">
-        <h2 class="section-title">GitHub Trending</h2>
-        <p class="no-stories">No verified stories today.</p>
-      </section>
-  </main>
-  <footer>Compiled by Pavano &middot; April 2, 2026</footer>
+</div>
 </body>
 </html>
